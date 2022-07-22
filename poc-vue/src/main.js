@@ -1,24 +1,46 @@
+// import { createApp } from 'vue'
+// import App from './App.vue'
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap";
+// import store from './store'
+// import routes from "./routes";
+
+// createApp(App)
+//     .use(routes)
+//     .use(store)
+//     .mount('#app');
+
+// https://getbootstrap.com/docs/5.0/components/alerts/
+
 import { h, createApp } from 'vue';
 import singleSpaVue from 'single-spa-vue';
-import './set-public-path'
+import './set-public-path';
+// import spaReloader from "spa-reloader-vue";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
+import routes from "./routes";
+import store from './store'
 import App from './App.vue';
 
 const vueLifecycles = singleSpaVue({
-  createApp,
-  appOptions: {
-    render() {
-      return h(App, {
-        // single-spa props are available on the "this" object. Forward them to your component as needed.
-        // https://single-spa.js.org/docs/building-applications#lifecycle-props
-        // if you uncomment these, remember to add matching prop definitions for them in your App.vue file.
-        /*
-        name: this.name,
-        mountParcel: this.mountParcel,
-        singleSpa: this.singleSpa,
-        */
-      });
+    createApp,
+    appOptions: {
+        render() {
+            return h(App, {
+                // single-spa props are available on the "this" object. Forward them to your component as needed.
+                // https://single-spa.js.org/docs/building-applications#lifecycle-props
+                // if you uncomment these, remember to add matching prop definitions for them in your App.vue file.
+                /*
+                name: this.name,
+                mountParcel: this.mountParcel,
+                singleSpa: this.singleSpa,
+                */
+            });
+        },
     },
-  },
+    handleInstance: (app) => {
+        app.use(routes).use(store);
+    }
 });
 
 export const bootstrap = vueLifecycles.bootstrap;

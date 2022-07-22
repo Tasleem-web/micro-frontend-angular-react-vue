@@ -1,25 +1,31 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="wrapper">
+    <NavBar />
+    <div class="container">test
+      <router-view></router-view>
+    </div>
+    <NotificationsList />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import NavBar from "./components/NavBar.vue";
+import NotificationsList from "./components/NotificationsList.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    NavBar,
+    NotificationsList,
+  },
+  // setup() {
+
+  // },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+a.disabled {
+  color: gray;
+  pointer-events: none;
 }
 </style>

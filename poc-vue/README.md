@@ -1,5 +1,8 @@
-# poc-vue
+# vuex-todo-manager
 
+setup vuex with modules wise
+
+full featured vue e-commerce web application
 ## Project setup
 ```
 yarn install

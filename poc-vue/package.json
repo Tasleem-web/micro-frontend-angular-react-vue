@@ -1,5 +1,5 @@
 {
-  "name": "@mindmap/poc-vue",
+  "name": "E-Commerce",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,17 @@
     "serve:standalone": "vue-cli-service serve --mode standalone"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.5",
+    "axios": "^0.27.2",
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.8.3",
     "core-js": "^3.8.3",
+    "http-proxy-middleware": "^2.0.6",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.16",
+    "vuex": "^4.0.2",
     "single-spa-vue": "^2.1.0",
-    "vue": "^3.2.13"
+    "spa-reloader-vue": "^0.0.12"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
