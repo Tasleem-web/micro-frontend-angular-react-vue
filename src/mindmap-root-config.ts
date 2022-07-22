@@ -29,6 +29,14 @@ registerApplication(
   }
 );
 
+registerApplication(
+  "@mindmap/poc-vue",
+  () => System.import("@mindmap/poc-vue"),
+  (location) => {
+    return location.pathname.startsWith("/poc-vue");
+  }
+);
+
 applications.forEach(registerApplication);
 layoutEngine.activate();
 start();
