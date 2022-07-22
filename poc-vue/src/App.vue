@@ -1,8 +1,21 @@
 <template>
   <div class="wrapper">
     <NavBar />
-    <div class="container">test
-      <router-view></router-view>
+    <div class="container">
+      test
+      <!-- <router-view></router-view> -->
+      <div class="row">
+        <div class="col-12">
+          <div id="nav">
+            <router-link to="/">Home</router-link> |
+            <router-link to="/cats">Cats</router-link>
+          </div>
+        </div>
+
+        <div class="col-12 bg-light">
+          <!-- <router-view /> -->
+        </div>
+      </div>
     </div>
     <NotificationsList />
   </div>

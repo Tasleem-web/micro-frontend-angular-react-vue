@@ -1,4 +1,5 @@
 <template>
+ProductList
   <div class="d-flex align-items-stretch flex-wrap">
     <template v-for="product in products" :key="product.id">
       <ProductCart :product="product" />

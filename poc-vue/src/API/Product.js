@@ -1,11 +1,11 @@
 import API from "./api";
-// import axios from 'axios';
+import axios from 'axios';
 
 export default {
-    all(endPoint) {
-        return API.post(endPoint);
-        // const res = await axios.get(`some-url/todos`);
-        // console.log(res)
+    async all() {
+        // return API.post(endPoint);
+        return await axios.get(`https://fakestoreapi.com/products`);
+
     },
     getByProductId(endPoint, payload = null) {
         if (payload) {

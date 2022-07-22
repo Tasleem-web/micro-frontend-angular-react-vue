@@ -3,7 +3,7 @@ import API from "../../../API/Product";
 export const getProducts = ({ commit }) => {
     API.all('product/getProducts')
         .then((res) => {
-            console.log(res);
+            console.log("https://fakestoreapi.com/products", res);
             commit('SET_PRODUCTS', res.data)
         })
 }
